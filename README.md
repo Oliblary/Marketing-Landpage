@@ -3,60 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oliblary | Build Your Online Business with Systeme.io</title>
+<title>Oliblary | Start Free with Systeme.io</title>
 
 <style>
-:root{
-  --primary:#00A0ff;
-  --dark:#111;
-  --light:#fff;
-  --gray:#555;
-  --shadow:0 10px 30px rgba(0,0,0,0.12);
-}
+* { margin:0; padding:0; box-sizing:border-box; font-family: Arial,sans-serif; }
+body { background:#f9f9f9; color:#333; line-height:1.6; }
+.container { width:90%; max-width:1200px; margin:0 auto; }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
-body{background:#f7f7f7;color:#333;line-height:1.6;}
-.container{width:90%;max-width:1100px;margin:auto;}
-
-/* GLOBAL */
-section{padding:70px 0;}
-
-/* HERO */
-.hero{
-  min-height:95vh;
+/* HERO (ELITE VERSION) */
+header {
+  min-height: 95vh;
   display:flex;
+  flex-direction:column;
   align-items:center;
   justify-content:center;
   text-align:center;
   color:#fff;
   padding:40px 20px;
-  background:
-    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
-    url('https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg') center/cover no-repeat;
   position:relative;
+  overflow:hidden;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url('https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg') center/cover no-repeat;
 }
 
-.hero h1{font-size:3rem;margin-bottom:20px;}
-.hero p{font-size:1.2rem;max-width:700px;margin:auto;margin-bottom:25px;}
+.hero-content {
+  max-width:700px;
+  z-index:2;
+}
 
-.btn{
+header h1 { font-size:3rem; margin-bottom:20px; }
+header p { font-size:1.3rem; margin-bottom:25px; }
+
+.cta-btn {
   display:inline-block;
-  padding:16px 40px;
-  background:var(--primary);
+  padding:18px 45px;
+  background:#00A0ff;
   color:#fff;
   border-radius:8px;
   text-decoration:none;
   font-weight:bold;
+  transition:0.3s;
 }
-.btn:hover{background:#0077cc;}
+.cta-btn:hover { background:#0080cc; }
 
-.subtext{display:block;margin-top:10px;font-size:0.9rem;opacity:0.8;}
+.subtext {
+  display:block;
+  margin-top:10px;
+  font-size:0.9rem;
+  opacity:0.8;
+}
 
-/* HERO MOCKUP */
-.hero-mockup{
+/* HERO IMAGE OVERLAY */
+.hero-image {
   margin-top:40px;
+  z-index:2;
 }
-.hero-mockup img{
+
+.hero-image img {
   width:100%;
   max-width:850px;
   border-radius:12px;
@@ -64,105 +69,101 @@ section{padding:70px 0;}
 }
 
 /* FEATURES */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-.card{
-  background:#fff;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:var(--shadow);
-  text-align:center;
-}
-
-.card img{width:60px;margin-bottom:15px;}
-.card h3{color:#2c6fff;margin-bottom:10px;}
-.card p{color:var(--gray);}
-
-/* IMAGE STRIP */
-.showcase img{
-  width:100%;
-  border-radius:12px;
-  box-shadow:var(--shadow);
-}
-
-/* TRUST */
-.trust{
-  background:#eaf4ff;
-  text-align:center;
-}
-.trust h2{margin-bottom:10px;}
-.trust p{max-width:700px;margin:auto;color:var(--gray);}
-.stats{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:40px;
-  margin-top:30px;
-}
-.stats div h3{color:var(--primary);font-size:1.8rem;}
-
-/* TESTIMONIALS */
-.testimonials{
-  background:#fff;
-  text-align:center;
-}
-.testimonial{
-  max-width:500px;
-  margin:20px auto;
-  padding:20px;
-  box-shadow:var(--shadow);
-  border-radius:12px;
-}
-.testimonial img{
-  width:70px;
-  border-radius:50%;
-  margin-bottom:10px;
-}
-
-/* CTA */
-.cta{
-  background:#ff6f61;
-  color:#fff;
-  text-align:center;
-}
-.cta input{
-  padding:15px;
-  border:none;
-  border-radius:6px;
-  margin:5px;
-}
-
-/* EXIT POPUP */
-.popup{
-  position:fixed;
-  top:0;left:0;
-  width:100%;height:100%;
-  background:rgba(0,0,0,0.7);
-  display:none;
-  align-items:center;
-  justify-content:center;
-}
-
-.popup-content{
+.features { display:flex; flex-wrap:wrap; gap:20px; margin:60px 0; }
+.feature {
+  flex:1;
+  min-width:250px;
   background:#fff;
   padding:30px;
   border-radius:12px;
   text-align:center;
-  max-width:400px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.12);
 }
-.popup-content h2{margin-bottom:10px;}
-.popup-content button{
-  margin-top:15px;
-  padding:12px 25px;
-  background:var(--primary);
-  border:none;
+.feature img { width:70px; margin-bottom:15px; }
+.feature h3 { color:#4a90e2; }
+
+/* BONUS */
+.bonus {
+  background:#fff3e6;
+  padding:40px;
+  border-radius:12px;
+  margin:50px 0;
+  text-align:center;
+}
+
+/* IMAGE */
+.image-section {
+  text-align:center;
+  margin:60px 0;
+}
+.image-section img {
+  width:100%;
+  max-width:900px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  background:#fff;
+  padding:60px 20px;
+  border-radius:12px;
+  margin:60px 0;
+}
+.testimonial { text-align:center; margin-bottom:40px; }
+.testimonial img {
+  width:80px;
+  border-radius:50%;
+  margin-bottom:15px;
+}
+.testimonial h4 { color:#4a90e2; }
+
+/* TRUST */
+.trust {
+  background:#e6f2ff;
+  padding:60px 20px;
+  text-align:center;
+  border-radius:12px;
+  margin:60px 0;
+}
+.trust h3 { font-size:1.8rem; margin-bottom:15px; }
+.trust-stats {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:40px;
+  margin-top:25px;
+}
+.trust-stats h2 { color:#4a90e2; }
+
+/* CTA */
+.cta {
+  background:#ff6f61;
   color:#fff;
+  text-align:center;
+  padding:60px 20px;
+  border-radius:12px;
+  margin:60px 0;
+}
+.cta input {
+  padding:16px;
+  margin:10px;
+  border:none;
   border-radius:6px;
-  cursor:pointer;
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:30px;
+  background:#333;
+  color:#fff;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.features { flex-direction:column; }
+header h1 { font-size:2.2rem; }
 }
 </style>
 </head>
@@ -170,130 +171,75 @@ section{padding:70px 0;}
 <body>
 
 <!-- HERO -->
-<header class="hero">
-  <div>
-    <h1>Build a Real Online Business with Systeme.io — Start Free Today</h1>
-    <p>
-      Create funnels, automate emails, and sell digital products using one simple platform designed for beginners and professionals.
-    </p>
+<header>
 
-    <a class="btn" href="https://systeme.io/?sa=sa0266558169ffdca98644ff784ec3a16590d5ef92">
-      Start Free Now
-    </a>
-    <span class="subtext">No credit card required</span>
+<div class="hero-content">
+<h1>Start Your Online Business with Systeme.io — 100% FREE</h1>
+<p>
+Build funnels, automate emails, and grow your income using one simple all-in-one platform.
+</p>
 
-    <div class="hero-mockup">
-      <img src="https://images.pexels.com/photos/6476589/pexels-photo-6476589.jpeg" alt="Systeme.io dashboard">
-    </div>
-  </div>
+<a href="https://systeme.io/?sa=sa0266558169ffdca98644ff784ec3a16590d5ef92" class="cta-btn">
+Start Free with Systeme.io
+</a>
+<span class="subtext">No credit card required</span>
+</div>
+
+<div class="hero-image">
+<img src="https://images.pexels.com/photos/6476589/pexels-photo-6476589.jpeg" alt="Systeme.io dashboard preview">
+</div>
+
 </header>
 
 <div class="container">
 
 <!-- FEATURES -->
-<section>
-<div class="grid">
-
-<div class="card">
+<section class="features">
+<div class="feature">
 <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png">
-<h3>Funnels That Convert</h3>
-<p>Build high-performing sales funnels in minutes.</p>
+<h3>Funnels with Systeme.io</h3>
+<p>Create high-converting funnels using Systeme.io’s drag-and-drop builder.</p>
 </div>
 
-<div class="card">
+<div class="feature">
 <img src="https://cdn-icons-png.flaticon.com/512/3050/3050650.png">
 <h3>Email Automation</h3>
-<p>Automatically follow up and close more sales.</p>
+<p>Systeme.io lets you automate follow-ups and turn leads into customers.</p>
 </div>
 
-<div class="card">
+<div class="feature">
 <img src="https://cdn-icons-png.flaticon.com/512/1040/1040211.png">
-<h3>Sell Digital Products</h3>
-<p>Launch courses and earn online income easily.</p>
-</div>
-
+<h3>Sell Products Easily</h3>
+<p>Launch and sell courses or digital products directly with Systeme.io.</p>
 </div>
 </section>
 
-<!-- SHOWCASE -->
-<section class="showcase">
-<img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg">
-</section>
-
-<!-- TRUST -->
-<section class="trust">
-<h2>Trusted by Entrepreneurs Worldwide</h2>
+<!-- BONUS -->
+<section class="bonus">
+<h2>Why Systeme.io Matters</h2>
 <p>
-Thousands use Systeme.io to build automated businesses and generate income online.
+Most people fail online because they use too many tools.
+<br><br>
+<strong>Systeme.io gives you one simple system to start, grow, and scale your business.</strong>
 </p>
-
-<div class="stats">
-<div>
-<h3>100K+</h3>
-<p>Users</p>
-</div>
-
-<div>
-<h3>All-in-One</h3>
-<p>Platform</p>
-</div>
-
-<div>
-<h3>Free Plan</h3>
-<p>No Credit Card</p>
-</div>
-</div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-
-<div class="testimonial">
-<img src="https://randomuser.me/api/portraits/men/32.jpg">
-<p>"I built my first funnel in 2 days. Everything is simple."</p>
-<h4>- John D.</h4>
-</div>
-
-<div class="testimonial">
-<img src="https://randomuser.me/api/portraits/women/44.jpg">
-<p>"Systeme.io replaced 3 tools for me. Very powerful."</p>
-<h4>- Sarah L.</h4>
-</div>
-
 </section>
 
 <!-- CTA -->
 <section class="cta">
-<h2>Start Free Today — No Credit Card Required</h2>
+<h2>Start Free with Systeme.io — No Credit Card Required</h2>
 
-<form action="https://systeme.io/?sa=sa0266558169ffdca98644ff784ec3a16590d5ef92">
+<form action="https://systeme.io/?sa=sa0266558169ffdca98644ff784ec3a16590d5ef92" target="_blank">
 <input type="email" placeholder="Enter your email" required>
-<input type="submit" value="Get Started">
+<input type="submit" value="Start Free Now">
 </form>
 </section>
 
 </div>
 
-<!-- EXIT POPUP -->
-<div class="popup" id="popup">
-  <div class="popup-content">
-    <h2>Before You Go</h2>
-    <p>Start building your online business with Systeme.io for free.</p>
-    <button onclick="window.location.href='https://systeme.io/?sa=sa0266558169ffdca98644ff784ec3a16590d5ef92'">
-      Start Free
-    </button>
-  </div>
-</div>
-
-<script>
-let shown=false;
-document.addEventListener("mouseleave", function(e){
-  if(e.clientY < 10 && !shown){
-    document.getElementById("popup").style.display="flex";
-    shown=true;
-  }
-});
-</script>
+<footer>
+<p>© 2026 Oliblary</p>
+<p>Affiliate disclosure: We may earn a commission if you sign up.</p>
+</footer>
 
 </body>
 </html>
