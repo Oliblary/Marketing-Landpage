@@ -187,46 +187,6 @@ header p { font-size:1.3rem; margin-bottom:25px; }
 
   </div>
 </section>
-
-
-
-/* VERIFIED TESTIMONIALS */
-.review-top {
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin-bottom:10px;
-}
-
-.review-top img {
-  width:50px;
-  height:50px;
-  border-radius:50%;
-  object-fit:cover;
-}
-
-.role {
-  font-size:0.8rem;
-  color:#777;
-}
-
-.stars {
-  color:#FFD700;
-  font-size:1.2rem;
-  margin:10px 0;
-  letter-spacing:3px;
-  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
-}
-
-.badge {
-  display:inline-block;
-  margin-top:10px;
-  font-size:0.75rem;
-  color:#00A0ff;
-  background:#e6f2ff;
-  padding:5px 10px;
-  border-radius:20px;
-  font-weight:bold;
 }
 
 /* FAQ */
